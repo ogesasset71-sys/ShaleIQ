@@ -1,0 +1,20 @@
+[
+    {
+        "id": "b0bfc605-b0fb-4c74-a681-951b2e164dde",
+        "email": "newsletter.test@example.com",
+        "timestamp": "2025-09-29T13:11:50Z",
+        "status": "active"
+    },
+    {
+        "id": "029de471-fc69-44c1-bd80-64eeb68f986f",
+        "email": "sanskar.jain@oges.co",
+        "timestamp": "2025-09-29T13:14:22Z",
+        "status": "active"
+    },
+    {
+        "id": "0fd80476-ca15-42fc-bd6e-5e66bc8531d6",
+        "email": "anjani@oges.co",
+        "timestamp": "2025-09-30T07:59:42Z",
+        "status": "active"
+    }
+]

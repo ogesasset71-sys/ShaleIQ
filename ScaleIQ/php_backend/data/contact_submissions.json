@@ -1,0 +1,44 @@
+[
+    {
+        "id": "e650bfd0-8d12-45d1-877e-5b3e1f56c350",
+        "full_name": "John Test",
+        "email": "john.test@example.com",
+        "company": "Test Energy Corp",
+        "position": "CTO",
+        "phone": "+1234567890",
+        "project_type": "Complete GCC Setup",
+        "budget": "$500K - $1M",
+        "timeline": "3-6 months",
+        "message": "Interested in setting up GCC in India for our upstream operations.",
+        "timestamp": "2025-09-29T13:11:42Z",
+        "status": "new"
+    },
+    {
+        "id": "dff31526-d904-45f0-ae87-ceeee0c45a44",
+        "full_name": "Test User PHP",
+        "email": "test.php@example.com",
+        "company": "PHP Test Corp",
+        "position": "Developer",
+        "phone": "+1234567890",
+        "project_type": "API Development",
+        "budget": "$10K - $50K",
+        "timeline": "1-2 months",
+        "message": "Testing PHP backend integration",
+        "timestamp": "2025-09-30T07:18:14Z",
+        "status": "new"
+    },
+    {
+        "id": "f53c1e62-f81a-4b3e-87d1-42abb927a156",
+        "full_name": "Sanskar Jain",
+        "email": "sanskar.jain@oges.co",
+        "company": "Oges Solutions Private Limited",
+        "position": "Ops Manager",
+        "phone": null,
+        "project_type": "Core Engineering Services",
+        "budget": null,
+        "timeline": "3-6 months",
+        "message": "Test Details",
+        "timestamp": "2025-09-30T08:01:37Z",
+        "status": "new"
+    }
+]

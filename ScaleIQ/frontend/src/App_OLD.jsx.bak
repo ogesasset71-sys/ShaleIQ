@@ -1,0 +1,77 @@
+// Version: 2024100301 - Cache Buster
+import React from "react";
+import "./App.css"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ScaleIQHeader } from "./components/ScaleIQHeader";
+import { HeroSection } from "./components/HeroSection";
+import { AboutUsSection } from "./components/AboutUsSection";
+import { CompetitiveEdgeSection } from "./components/CompetitiveEdgeSection";
+import { TrustSection } from "./components/TrustSection";
+import { EngagementModel } from "./components/EngagementModel";
+import { TeamSection } from "./components/TeamSection";
+import { ContactSection } from "./components/ContactSection";
+import { Footer } from "./components/Footer";
+import { GoToTop } from "./components/GoToTop";
+import { Toaster } from "./components/ui/sonner";
+import { EngineeringServices } from "./components/EngineeringServices";
+import { DigitalServices } from "./components/DigitalServices";
+import { GCCSetup } from "./components/GCCSetup";
+import { CaseStudies } from "./components/CaseStudies";
+import { RAndD } from "./components/RAndD";
+import { AdminDashboard } from "./components/AdminDashboard";
+
+const Home = () => {
+  React.useEffect(() => {
+    // Handle hash navigation from other pages
+    const handleHashNavigation = () => {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+
+    handleHashNavigation();
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <ScaleIQHeader />
+      <HeroSection />
+      <AboutUsSection />
+      <CompetitiveEdgeSection />
+      <TrustSection />
+      <EngagementModel />
+      <TeamSection />
+      <ContactSection />
+      <Footer />
+      <GoToTop />
+      <Toaster />
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/engineering" element={<EngineeringServices />} />
+          <Route path="/rnd" element={<RAndD />} />
+          <Route path="/digital" element={<DigitalServices />} />
+          <Route path="/digital-services" element={<DigitalServices />} />
+          <Route path="/gcc-setup" element={<GCCSetup />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
