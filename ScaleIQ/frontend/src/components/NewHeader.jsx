@@ -39,8 +39,8 @@ export const NewHeader = () => {
         { name: "Oil Service Companies", path: "/serve/oil-service" },
       ],
     },
-    { name: "News", path: "/news" },
-    { name: "Joins", path: "/join" },
+    { name: "News & Insights", path: "/news" },
+    { name: "Join Us", path: "/join" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -72,7 +72,7 @@ export const NewHeader = () => {
             className="flex items-center space-x-3 z-50"
             data-testid="logo-link"
           >
-            <div className="text-2xl font-bold text-white">
+            <div className="text-2xl font-bold text-scaleiq-gold">
               Scale<span className="text-scaleiq-gold">IQ</span>
             </div>
           </Link>

@@ -11,22 +11,22 @@ export const AboutLeadership = () => {
     {
       name: "Rajeev Sonthalia",
       title: "Founder and CEO",
-      image: "/api/placeholder/400/400",
+      image: "/public/1.png",
     },
     {
       name: "Saurabh Srivastav",
       title: "Founder and COO",
-      image: "/api/placeholder/400/400",
+      image: "/public/2.png",
     },
     {
       name: "Prashant Mathur",
       title: "Chief Client Officer",
-      image: "/api/placeholder/400/400",
+      image: "/public/3.png",
     },
     {
       name: "Anita Kanodia",
       title: "Chief Legal Officer",
-      image: "/api/placeholder/400/400",
+      image: "/public/4.png",
     },
   ];
 
@@ -129,9 +129,10 @@ export const AboutLeadership = () => {
             </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter">
               The{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-scaleiq-gold to-[#Ffd700]">
-                Leadership
-              </span>
+         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D8B15A] via-[#916901] to-[#916901]">
+  Leadership
+</span>
+
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Guided by industry veterans and digital pioneers, ScaleIQ is
