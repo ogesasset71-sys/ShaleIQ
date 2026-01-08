@@ -20,7 +20,7 @@ export const NewHeader = () => {
         { name: "Partners & Growth", path: "/about/partners" },
       ],
     },
-    { name: "How We Work", path: "/#how-we-work" },
+    { name: "How We Work", path: "/how-we-work" },
     {
       name: "What We Do",
       items: [
