@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Users, BarChart3, Lightbulb, CheckCircle2, Monitor } from 'lucide-react';
 
-const HowWeWork = () => {
+const Newhowwework = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -143,4 +143,4 @@ const HowWeWork = () => {
   );
 };
 
-export default HowWeWork;
+export default Newhowwework;

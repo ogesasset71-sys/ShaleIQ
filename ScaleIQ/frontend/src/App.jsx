@@ -48,7 +48,8 @@ import { JoinUsPage } from "./components/JoinUsPage";
 
 // Admin (keep existing)
 import { AdminDashboard } from "./components/AdminDashboard";
-import { HowWeWorkPage } from "./components/HowWeWorkPage";
+
+import Newhowwework from "./components/ui/howwework/Newhowwework";
 
 const Home = () => {
   React.useEffect(() => {
@@ -181,7 +182,7 @@ function App() {
           {/* {How We Work} */}
           <Route
             path="/how-we-work"
-            element={<HowWeWorkPage/>
+            element={<Newhowwework/>
              }
                 />
 
