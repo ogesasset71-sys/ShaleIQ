@@ -255,8 +255,7 @@ export const OgesOne = () => {
               className="text-6xl lg:text-8xl font-bold mb-8 tracking-tight"
             >
               The{" "}
-              <span className="text-scaleiq-gold italic">Single Source</span> of
-              Truth
+              <span className="text-scaleiq-gold italic">OgesOne</span>
             </motion.h1>
 
             <motion.p
@@ -264,7 +263,7 @@ export const OgesOne = () => {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12"
             >
-              OgesOne is a comprehensive software platform hosting multiple
+              A comprehensive software platform hosting multiple
               applications, integrating data from across your energy value chain
               with AI and Machine Learning.
             </motion.p>
@@ -416,57 +415,60 @@ export const OgesOne = () => {
           </AnimatePresence>
         </section>
 
-        {/* Security & Hosting */}
-        <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 bg-gradient-to-br from-white/10 to-transparent border border-white/10 p-12 rounded-[40px] backdrop-blur-md relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-scaleiq-gold to-transparent" />
-              <Shield className="w-12 h-12 text-scaleiq-gold mb-8" />
-              <h3 className="text-3xl font-bold mb-6">
-                Enterprise Security & Compliance
-              </h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="font-bold text-white flex items-center gap-2">
-                    <Lock className="w-4 h-4 text-scaleiq-gold" />{" "}
-                    Authentication
-                  </div>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    LDAP/AD integration with Single Sign-On (SSO) and
-                    multi-factor capabilities.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <div className="font-bold text-white flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-scaleiq-gold" />{" "}
-                    Governance
-                  </div>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    Granular access control and compliance with local data
-                    residency policies.
-                  </p>
-                </div>
-              </div>
-            </div>
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">50+ Data Connectors</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Seamlessly integrate OgesOne with your existing enterprise systems,
+            simulation software, and data sources.
+          </p>
+        </div>
 
-            <div className="bg-scaleiq-gold rounded-[40px] p-12 text-black flex flex-col justify-between group hover:scale-[1.02] transition-transform duration-500">
-              <div>
-                <Zap className="w-12 h-12 mb-8 animate-pulse" />
-                <h3 className="text-3xl font-bold mb-4 tracking-tight">
-                  Rapid Deployment
-                </h3>
-                <p className="font-medium opacity-80 mb-8">
-                  Deploy OgesOne on-premise, in the public cloud (AWS/Azure), or
-                  via a secure private cloud hybrid.
-                </p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { name: "SAP ECC & HANA", desc: "ERP / Business Software", tag: "SAP" },
+            { name: "DecisionSpace 365", desc: "Subsurface Software", tag: "DS" },
+            { name: "Petrel", desc: "Subsurface Software", tag: "P" },
+            { name: "IBM DB2", desc: "Database", tag: "IBM" },
+            { name: "MySQL", desc: "Database", tag: "MySQL" },
+            { name: "OFM", desc: "Production Software", tag: "OFM" },
+            { name: "Proficy Historian", desc: "Real-time Data / SCADA", tag: "GE" },
+            { name: "INTERSECT", desc: "Reservoir Simulation", tag: "IX" },
+            { name: "tNavigator", desc: "Reservoir Simulation", tag: "tN" },
+            { name: "Eclipse", desc: "Reservoir Simulation", tag: "ECL" },
+            { name: "IMEX", desc: "Reservoir Simulation", tag: "IMEX" },
+            { name: "Microsoft SQL Server", desc: "Database", tag: "SQL" },
+            { name: "OSIsoft PI", desc: "Real-time Data / SCADA", tag: "OSI" },
+            { name: "Compass", desc: "Directional Services", tag: "⛓" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="relative bg-white/5 backdrop-blur-md border border-white/10
+                        rounded-[28px] p-8 text-center group
+                        hover:border-scaleiq-gold/60 hover:-translate-y-1
+                        transition-all duration-500"
+            >
+              {/* Top Accent */}
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-scaleiq-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              {/* Icon Placeholder */}
+              <div className="w-14 h-14 mx-auto mb-6 rounded-xl
+                              bg-white/10 flex items-center justify-center
+                              text-lg font-bold text-white">
+                {item.tag}
               </div>
-              <button className="flex items-center gap-3 font-bold group/btn">
-                Explore Hosting{" "}
-                <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
-              </button>
+
+              <h4 className="font-bold text-white mb-2">
+                {item.name}
+              </h4>
+              <p className="text-sm text-gray-400">
+                {item.desc}
+              </p>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
+
 
         {/* CTA */}
         <section className="max-w-7xl mx-auto px-6 lg:px-8">
