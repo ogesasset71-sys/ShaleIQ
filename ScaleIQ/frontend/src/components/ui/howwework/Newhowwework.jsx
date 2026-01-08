@@ -50,9 +50,9 @@ const Newhowwework = () => {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight bg-gradient-to-b from-white via-white to-[#95691F] bg-clip-text text-transparent">
-          How We Work
-        </h1>
+<h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-scaleiq-gold">
+  How We Work
+</h1>
         <div className="w-24 h-1 bg-[#95691F] mx-auto rounded-full shadow-[0_0_15px_#95691F]"></div>
       </motion.div>
 
@@ -87,10 +87,9 @@ const Newhowwework = () => {
 
       {/* Solution Challenges Section */}
       <div className="max-w-6xl mx-auto">
-        <h2 className={`text-3xl font-bold text-center mb-12`} style={{ color: goldBrand }}>
-          Two Ways We Solve Your Challenges
-        </h2>
-        
+<h2 className="text-4xl font-bold text-center text-scaleiq-gold mb-8 pb-1">
+  Two Ways We Solve Your Challenges
+</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Solution 1 */}
           <motion.div 

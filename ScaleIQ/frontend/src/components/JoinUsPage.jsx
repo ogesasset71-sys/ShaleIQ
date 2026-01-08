@@ -47,9 +47,9 @@ export const JoinUsPage = () => {
 
             <h1 className="text-5xl lg:text-8xl font-bold mb-8 leading-tight font-outfit">
               Build the <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-scaleiq-gold to-[#Ffd700]">
-                Future of Energy
-              </span>
+         <span className="text-transparent bg-clip-text bg-gradient-to-r from-scaleiq-gold to-scaleiq-gold">
+  Future of Energy
+</span>
             </h1>
 
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
