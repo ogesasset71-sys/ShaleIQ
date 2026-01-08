@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { HeroRightSection } from "./ui/HeroRightSection/HeroRightSection";
+import HeroRightSection2 from "./ui/HeroRightSection2/HeroRightSection2";
 
 export const NewHeroSection = () => {
   const navigate = useNavigate();
@@ -63,7 +64,8 @@ export const NewHeroSection = () => {
             className="order-1 lg:order-2 relative"
           >
             <div className="aspect-square rounded-2xl overflow-hidden relative">
-              <HeroRightSection />
+              {/* <HeroRightSection /> */}
+              <HeroRightSection2/>
             </div>
           </motion.div>
         </div>

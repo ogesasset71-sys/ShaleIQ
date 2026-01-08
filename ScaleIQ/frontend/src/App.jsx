@@ -48,6 +48,7 @@ import { JoinUsPage } from "./components/JoinUsPage";
 
 // Admin (keep existing)
 import { AdminDashboard } from "./components/AdminDashboard";
+import { HowWeWorkPage } from "./components/HowWeWorkPage";
 
 const Home = () => {
   React.useEffect(() => {
@@ -177,6 +178,12 @@ function App() {
 
           {/* GCC Solutions */}
           <Route path="/gcc-solutions" element={<GCCSolutions />} />
+          {/* {How We Work} */}
+          <Route
+            path="/how-we-work"
+            element={<HowWeWorkPage/>
+             }
+                />
 
           {/* News & Insights */}
           <Route path="/news" element={<NewsPage />} />

@@ -1,0 +1,33 @@
+#box {
+  background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg);
+  background-size: cover;
+  border: 2px solid #5a4200;
+  border-radius: 50%;
+  
+  /* MASSIVE SIZE */
+  width: 400px; 
+  height: 400px;
+  
+  /* Slower rotation for a more cinematic feel at this size */
+  animation: movimiento 12s linear 0s infinite;
+  
+  /* Golden Texture Filter */
+  filter: sepia(100%) saturate(300%) brightness(110%) hue-rotate(-10deg);
+  
+  /* Scaled shadows to maintain the 3D spherical depth */
+  box-shadow: 
+    0 0 80px RGBA(255, 215, 0, 0.15),
+    -20px -20px 40px #000 inset,
+    10px 10px 70px #000 inset,
+    -140px -140px 80px RGBA(139, 101, 8, 0.45) inset, 
+    80px 80px 120px RGBA(255, 215, 0, 0.25) inset;
+    
+  margin: 2em auto;
+  transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+@keyframes movimiento {
+  0% { background-position: 0 0 }
+  /* Adjusted for the larger width to keep the texture mapping correct */
+  100% { background-position: 1065px 0 } 
+}
