@@ -1,33 +1,39 @@
 #box {
   background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg);
   background-size: cover;
-  border: 2px solid #5a4200;
   border-radius: 50%;
   
-  /* MASSIVE SIZE */
+  /* Remove the physical border */
+  border: none; 
+  
   width: 400px; 
   height: 400px;
   
-  /* Slower rotation for a more cinematic feel at this size */
-  animation: movimiento 12s linear 0s infinite;
+  animation: movimiento 25s linear infinite;
   
-  /* Golden Texture Filter */
-  filter: sepia(100%) saturate(300%) brightness(110%) hue-rotate(-10deg);
+  /* SOFT GOLD FILTER: Land is golden, Oceans are black */
+  filter: blur(0.5px) sepia(100%) saturate(140%) contrast(180%) brightness(85%) hue-rotate(-10deg);
   
-  /* Scaled shadows to maintain the 3D spherical depth */
+  /* BOX SHADOW BORDER & GLOW:
+     1. Inner shadows create the 3D spherical depth.
+     2. Outer shadows create the 'soft golden border' effect.
+  */
   box-shadow: 
-    0 0 80px RGBA(255, 215, 0, 0.15),
-    -20px -20px 40px #000 inset,
-    10px 10px 70px #000 inset,
-    -140px -140px 80px RGBA(139, 101, 8, 0.45) inset, 
-    80px 80px 120px RGBA(255, 215, 0, 0.25) inset;
+    /* The Soft Golden Border (Outer Glows) */
+    0 0 2px 2px rgba(255, 215, 0, 0.7),          /* Sharp but soft inner edge */
+    0 0 15px 5px rgba(255, 215, 0, 0.3),         /* Middle bloom */
+    0 0 40px 10px rgba(184, 134, 11, 0.2),       /* Wide outer dissipation */
+
+    /* The Internal 3D Depth */
+    -30px -30px 60px #000 inset,                 /* Side shadow */
+    15px 15px 80px #000 inset,                   /* Core depth */
+    -80px -80px 120px rgba(184, 134, 11, 0.3) inset; /* Soft gold land glow */
     
   margin: 2em auto;
-  transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+  background-color: #000;
 }
 
 @keyframes movimiento {
-  0% { background-position: 0 0 }
-  /* Adjusted for the larger width to keep the texture mapping correct */
-  100% { background-position: 1065px 0 } 
+  0% { background-position: 0 0; }
+  100% { background-position: 1065px 0; } 
 }

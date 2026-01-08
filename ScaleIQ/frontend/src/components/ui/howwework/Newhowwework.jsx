@@ -16,45 +16,44 @@ const Newhowwework = () => {
     visible: { y: 0, opacity: 1 }
   };
 
+  // Your specific Gold Color
+  const goldBrand = "#95691F";
+
   const features = [
     {
       title: "AI-first ER&D",
       desc: "Unique integration of machine learning, digital platforms, and engineering expertise under one roof.",
-      icon: <Cpu className="w-8 h-8 text-yellow-500" />,
-      shadowColor: "rgba(234, 179, 8, 0.3)"
+      icon: <Cpu className="w-8 h-8" style={{ color: goldBrand }} />,
     },
     {
       title: "Talent Access",
       desc: "Hybrid workforce model combining onshore client teams with global delivery centers.",
-      icon: <Users className="w-8 h-8 text-teal-400" />,
-      shadowColor: "rgba(45, 212, 191, 0.3)"
+      icon: <Users className="w-8 h-8" style={{ color: goldBrand }} />,
     },
     {
       title: "Industry Depth",
       desc: "Starting with energy sector expertise before strategic expansion to adjacent industrial markets.",
-      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
-      shadowColor: "rgba(251, 146, 60, 0.3)"
+      icon: <BarChart3 className="w-8 h-8" style={{ color: goldBrand }} />,
     },
     {
       title: "IP Creation Focus",
       desc: "Product-centric approach that builds proprietary assets, not just services.",
-      icon: <Lightbulb className="w-8 h-8 text-purple-400" />,
-      shadowColor: "rgba(192, 132, 252, 0.3)"
+      icon: <Lightbulb className="w-8 h-8" style={{ color: goldBrand }} />,
     }
   ];
 
   return (
     <div className="min-h-screen bg-black text-white py-20 px-4 font-sans">
-      {/* Header Section */}
+      {/* Header Section with your specific color transition */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-yellow-500 mb-4 tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight bg-gradient-to-b from-white via-white to-[#95691F] bg-clip-text text-transparent">
           How We Work
         </h1>
-        <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full"></div>
+        <div className="w-24 h-1 bg-[#95691F] mx-auto rounded-full shadow-[0_0_15px_#95691F]"></div>
       </motion.div>
 
       {/* Top 4 Cards Grid */}
@@ -68,11 +67,14 @@ const Newhowwework = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            whileHover={{ scale: 1.05, translateY: -10 }}
-            className="p-8 rounded-2xl bg-[#111] border border-gray-800 flex flex-col items-center text-center transition-all duration-300"
-            style={{ boxShadow: `0 10px 30px -10px ${item.shadowColor}` }}
+            whileHover={{ scale: 1.05 }}
+            className="p-8 rounded-2xl bg-black border border-gray-900 flex flex-col items-center text-center transition-all duration-500"
+            /* Box Shadow using your 0-80-100 logic: Very dark core, gold only at the end */
+            style={{ 
+              boxShadow: `0 10px 40px -5px rgba(0,0,0,1), 0 0 20px -5px ${goldBrand}` 
+            }}
           >
-            <div className="mb-6 p-4 bg-black rounded-xl border border-gray-700">
+            <div className="mb-6 p-4 bg-black rounded-xl border border-[#95691F]/20">
               {item.icon}
             </div>
             <h3 className="text-xl font-bold mb-4 text-gray-100">{item.title}</h3>
@@ -85,7 +87,7 @@ const Newhowwework = () => {
 
       {/* Solution Challenges Section */}
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-yellow-500 mb-12">
+        <h2 className={`text-3xl font-bold text-center mb-12`} style={{ color: goldBrand }}>
           Two Ways We Solve Your Challenges
         </h2>
         
@@ -95,19 +97,20 @@ const Newhowwework = () => {
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl border border-yellow-900/50 bg-[#0A0A0A] hover:border-yellow-500/50 transition-colors group"
+            className="p-8 rounded-3xl border border-gray-900 bg-black hover:border-[#95691F]/40 transition-all duration-700"
+            style={{ boxShadow: `0 0 50px -20px ${goldBrand}` }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <Monitor className="text-yellow-500" />
-              <span className="text-xs text-yellow-600 font-mono">Q1: Need to establish operations in India?</span>
+              <Monitor style={{ color: goldBrand }} />
+              <span className="text-xs font-mono" style={{ color: goldBrand }}>Q1: Need to establish operations in India?</span>
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">India GCC Setup</h3>
-            <p className="text-yellow-500 text-sm mb-6 italic">Answer: Custom digital GCC establishment services</p>
+            <p className="text-sm mb-6 italic" style={{ color: goldBrand }}>Answer: Custom digital GCC establishment services</p>
             
             <ul className="space-y-4">
               {["OgesOne Platform implementation", "Office setup & automation solutions", "AI/ML analytics and insights", "Legacy system integration process establishment"].map((list, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-400 text-sm">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: goldBrand }} />
                   {list}
                 </li>
               ))}
@@ -119,19 +122,20 @@ const Newhowwework = () => {
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl border border-yellow-900/50 bg-[#0A0A0A] hover:border-yellow-500/50 transition-colors group"
+            className="p-8 rounded-3xl border border-gray-900 bg-black hover:border-[#95691F]/40 transition-all duration-700"
+            style={{ boxShadow: `0 0 50px -20px ${goldBrand}` }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <Monitor className="text-yellow-500" />
-              <span className="text-xs text-yellow-600 font-mono">Q2: Need to establish your R&D?</span>
+              <Monitor style={{ color: goldBrand }} />
+              <span className="text-xs font-mono" style={{ color: goldBrand }}>Q2: Need to establish your R&D?</span>
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Digital Solutions</h3>
-            <p className="text-yellow-500 text-sm mb-6 italic">Answer: Custom digital innovation expertise</p>
+            <p className="text-sm mb-6 italic" style={{ color: goldBrand }}>Answer: Custom digital innovation expertise</p>
             
             <ul className="space-y-4">
               {["R&D lab and innovation factory setup", "Research project execution and management", "Technology development and IP creation", "Proof of Concept and prototype development"].map((list, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-400 text-sm">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: goldBrand }} />
                   {list}
                 </li>
               ))}

@@ -182,9 +182,16 @@ function App() {
           {/* {How We Work} */}
           <Route
             path="/how-we-work"
-            element={<Newhowwework/>
-             }
-                />
+            element={
+              <>
+                <NewHeader />
+                <Newhowwework />
+                <CTASection />
+                <NewFooter />
+                <GoToTop />
+              </>
+            }
+          />
 
           {/* News & Insights */}
           <Route path="/news" element={<NewsPage />} />
