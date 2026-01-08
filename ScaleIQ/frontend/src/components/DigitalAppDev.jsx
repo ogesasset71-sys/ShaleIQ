@@ -22,12 +22,12 @@ export const DigitalAppDev = () => {
   ];
 
   const helpPoints = [
-    "Automating manual operational and reporting workflows",
-    "Enhancing existing applications without architectural disruption",
-    "UI/UX improvements for operators and analysts",
-    "Digitizing and automating approval-heavy workflows",
-    "Eliminating manual reconciliation in planning and scheduling",
-    "Automating compliance and audit tracking",
+  "Designing applications aligned to real energy workflows and operational constraints",
+  "Ensuring long-term accountability across development, enhancement, and support",
+  "Integrating seamlessly with existing enterprise and operational systems",
+  "Reducing functional silos through consistent application standards",
+  "Supporting continuous enhancement without disrupting live operations",
+  "Maintaining application stability in mission-critical environments",
   ];
 
   const caseStudy = {

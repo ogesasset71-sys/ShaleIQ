@@ -133,10 +133,10 @@ export const AboutModel = () => {
                 
                 {/* Main golden object with shimmer */}
                 <div className="absolute inset-0 shimmer-surface rounded-full border-4 border-scaleiq-gold/60" style={{
-                  background: 'radial-gradient(circle at 30% 30%, rgba(220, 191, 98, 0.3), rgba(11, 11, 11, 0.9))'
+                  background: ''
                 }}>
                   {/* Inner glow */}
-                  <div className="absolute inset-8 bg-gradient-to-br from-scaleiq-gold/20 to-transparent rounded-full"></div>
+                  {/* <div className="absolute inset-8 bg-gradient-to-br from-scaleiq-gold/20 to-transparent rounded-full"></div> */}
                   
                   {/* Concentric rings for depth */}
                   <svg width="400" height="400" className="absolute inset-0">
@@ -145,7 +145,7 @@ export const AboutModel = () => {
                       cy="200"
                       r="180"
                       fill="none"
-                      stroke="#DCBF62"
+                      stroke="#c9c4b0ff"
                       strokeWidth="1"
                       opacity="0.4"
                     />
@@ -154,19 +154,32 @@ export const AboutModel = () => {
                       cy="200"
                       r="160"
                       fill="none"
-                      stroke="#DCBF62"
+                      stroke="#d4d0c3ff"
                       strokeWidth="1"
                       opacity="0.2"
                     />
                   </svg>
+              {/* Center Text */}
+                          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div className="text-center">
+              {/* Image */}
+              <div className="mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-scaleiq-gold shadow-[0_0_15px_rgba(220,191,98,0.6)]">
+                <img
+                  src="/images/oilgas/hero.png"
+                  alt="ScaleIQ"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-                  {/* Center Text */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-scaleiq-gold text-4xl font-bold mb-2 drop-shadow-lg">ScaleIQ</div>
-                      <div className="text-gray-400 text-sm">Model</div>
-                    </div>
-                  </div>
+              <div className="text-gray-400 text-sm mt-2">Model</div>
+            </div>
+
+
+
+                          </div>
+
+
+
                 </div>
               </div>
 

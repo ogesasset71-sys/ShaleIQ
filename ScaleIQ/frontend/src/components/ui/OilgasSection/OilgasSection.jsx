@@ -16,6 +16,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 
+
 const domains = [
   {
     id: "upstream",
@@ -166,13 +167,15 @@ function OilgasSection() {
               <span className="w-2 h-2 rounded-full bg-scaleiq-gold animate-pulse" />
               Specialized Solutions
             </div>
-            <h1 className="text-6xl lg:text-8xl font-bold mb-8 tracking-tighter leading-[1.1]">
-              The Full{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-scaleiq-gold to-[#Ffd700]">
-                Value Chain
-              </span>
-              , Optimized.
-            </h1>
+     <h1 className="text-4xl lg:text-8xl font-bold mb-8 tracking-tighter leading-[1.1]">
+  Specialized Solutions
+  <br />
+  for the Full Oil & Gas{" "}
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-scaleiq-gold to-[#FFD700]">
+    Value Chain
+  </span>
+</h1>
+
             <p className="text-xl text-gray-400 leading-relaxed mb-10 max-w-2xl">
               From subsurface exploration to customer retail, ScaleIQ partners
               with oil & gas leaders to overcome digital fragmentation and

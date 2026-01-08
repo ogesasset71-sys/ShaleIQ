@@ -94,34 +94,66 @@ export const AboutOverview = () => {
         <div className="max-w-6xl mx-auto px-6 lg:px-8 mb-12">
           <div className="text-sm text-scaleiq-gold">About &gt; Overview</div>
         </div>
+{/* Hero Section - BLACK with GOLD */}
+{/* Hero Section - BLACK with GOLD */}
+<section
+  ref={(el) => (sectionsRef.current[0] = el)}
+  className="section-animate max-w-6xl mx-auto px-6 lg:px-8 mb-24 relative"
+>
+  <div className="card-premium bg-scaleiq-black border-2 border-scaleiq-gold/20 rounded-2xl p-12 shadow-2xl">
 
-        {/* Hero Section - BLACK with GOLD */}
-        <section 
-          ref={(el) => (sectionsRef.current[0] = el)}
-          className="section-animate max-w-6xl mx-auto px-6 lg:px-8 mb-20"
-        >
-          <div className="card-premium bg-scaleiq-black border-2 border-scaleiq-gold/20 rounded-2xl p-12 shadow-2xl">
-            <h1 className="text-5xl lg:text-6xl font-bold text-scaleiq-white mb-8">
-              Transformation Oriented, <span className="text-scaleiq-gold gold-underline inline-block">Grounded in Expertise</span>
-            </h1>
-            
-            <div className="h-1 w-24 bg-gradient-to-r from-scaleiq-gold to-scaleiq-gold-dark mb-8"></div>
-            
-            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-              <p>
-                We work across the entire digital spectrum – from legacy systems and brownfield infrastructure to modern data platforms and AI-driven applications – ensuring technology integrates seamlessly into live, regulated, and safety-critical operations
-              </p>
-              
-              <p>
-                Our approach is informed by deep domain knowledge across upstream, midstream, and downstream environments, enabling solutions that account for operational continuity, regulatory compliance, asset lifecycles, and scale.
-              </p>
-              
-              <p className="text-scaleiq-gold font-medium text-xl">
-                The result is digital engineering that delivers resilient, system-level outcomes that perform in real-world oil and gas conditions.
-              </p>
-            </div>
-          </div>
-        </section>
+    <div className="grid lg:grid-cols-2 gap-12 items-start relative">
+
+      {/* LEFT CONTENT */}
+      <div className="pt-2">
+        <h1 className="text-4xl lg:text-5xl font-bold text-scaleiq-white leading-tight">
+          Transformation Oriented,
+          <br className="hidden lg:block" />
+          <span className="text-scaleiq-gold gold-underline inline-block">
+            Grounded in Expertise
+          </span>
+        </h1>
+
+        <div className="mt-10 h-1 w-24 bg-gradient-to-r from-scaleiq-gold to-scaleiq-gold-dark mb-8" />
+
+        <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+          <p>
+            We work across the entire digital spectrum – from legacy systems and
+            brownfield infrastructure to modern data platforms and AI-driven
+            applications – ensuring technology integrates seamlessly into live,
+            regulated, and safety-critical operations.
+          </p>
+
+          <p>
+            Our approach is informed by deep domain knowledge across upstream,
+            midstream, and downstream environments, enabling solutions that
+            account for operational continuity, regulatory compliance, asset
+            lifecycles, and scale.
+          </p>
+        </div>
+      </div>
+
+{/* RIGHT IMAGE */}
+<div className="flex justify-center lg:justify-end items-end">
+  <div className="w-full max-w-lg rounded-2xl overflow-hidden border-2 border-scaleiq-gold/30 shadow-2xl">
+    <img
+      src="/image1.png"
+      alt="ScaleIQ Digital Transformation"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Subtle premium glow */}
+  <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-scaleiq-gold/10 rounded-full blur-3xl -z-10" />
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
 
         {/* Mission & Vision - Premium Cards */}
         <section 
@@ -163,7 +195,7 @@ export const AboutOverview = () => {
         </section>
 
         {/* Video Section - Interactive */}
-        <section 
+        {/* <section 
           ref={(el) => (sectionsRef.current[2] = el)}
           className="section-animate max-w-6xl mx-auto px-6 lg:px-8 mb-20"
         >
@@ -185,65 +217,127 @@ export const AboutOverview = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+{/* Solutions Section - BLACK Premium Card */}
+<section
+  ref={(el) => (sectionsRef.current[3] = el)}
+  className="section-animate max-w-6xl mx-auto px-6 lg:px-8 mb-20"
+>
+  <div className="card-premium bg-gradient-to-br from-scaleiq-black to-gray-900 border-2 border-scaleiq-gold/20 rounded-2xl p-12 shadow-2xl">
 
-        {/* Solutions Section - BLACK Premium Card */}
-        <section 
-          ref={(el) => (sectionsRef.current[3] = el)}
-          className="section-animate max-w-6xl mx-auto px-6 lg:px-8 mb-20"
-        >
-          <div className="card-premium bg-gradient-to-br from-scaleiq-black to-gray-900 border-2 border-scaleiq-gold/20 rounded-2xl p-12 shadow-2xl">
-            <div className="border-l-4 border-scaleiq-gold pl-8 mb-8">
-              <h2 className="text-4xl font-bold text-scaleiq-white mb-4">
-                Solutions Designed Precisely for the <span className="text-scaleiq-gold">Oil & Gas Industry</span>
-              </h2>
-              <div className="h-1 w-32 bg-gradient-to-r from-scaleiq-gold to-scaleiq-gold-dark"></div>
-            </div>
-            
-            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-              <p>
-                Oil and gas operations span a uniquely broad and interconnected landscape. Each segment operates under distinct technical, operational, and regulatory constraints, yet remains tightly coupled through shared assets, data flows, and commercial dependencies. Digital and AI solutions must therefore function across heterogeneous environments that include field operations, control systems, engineering workflows, enterprise platforms, and customer-facing systems.
-              </p>
-              
-              <div className="p-6 bg-scaleiq-gold/5 border-l-4 border-scaleiq-gold rounded-lg">
-                <p className="font-semibold text-scaleiq-gold text-xl">
-                  ScaleIQ solves the industry's biggest bottleneck by bridging fragmented tools, fragmented data and highly complex use cases.
-                </p>
-              </div>
-              
-              <p>
-                Traditional IT service providers and product companies tend to fragment responsibility across tools, vendors, and handoffs – leaving gaps between domain intent, system behavior, and operational outcomes. ScaleIQ is focused on addressing this gap through an end-to-end, consultative approach grounded in deep oil and gas domain expertise. We work across problem definition, digital architecture, AI workflow design, and system integration – ensuring solutions are shaped by how users align and adopt.
-              </p>
-              
-              <div className="p-6 bg-scaleiq-gold/5 border-l-4 border-scaleiq-gold rounded-lg">
-                <p className="font-semibold text-scaleiq-gold text-xl">
-                  Our strength lies in treating digital and AI as integral components of the operational ecosystem of oil and gas companies.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+    {/* SECTION HEADER */}
+    <div className="border-l-4 border-scaleiq-gold pl-8 mb-16">
+      <h2 className="text-4xl font-bold text-scaleiq-white mb-4">
+        Solutions Designed Precisely for the{" "}
+        <span className="text-scaleiq-gold">Oil & Gas Industry</span>
+      </h2>
+      <div className="h-1 w-32 bg-gradient-to-r from-scaleiq-gold to-scaleiq-gold-dark" />
+    </div>
 
-        {/* Core Workflows - Premium BLACK Card */}
-        <section 
-          ref={(el) => (sectionsRef.current[4] = el)}
-          className="section-animate max-w-6xl mx-auto px-6 lg:px-8 mb-20"
-        >
-          <div className="card-premium bg-gradient-to-br from-gray-900 to-scaleiq-black border-2 border-scaleiq-gold/20 rounded-2xl p-12 shadow-2xl">
-            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-              <p>
-                Core workflows such as subsurface interpretation, drilling and production optimization, pipeline integrity management and refinery operations strongly depend on domain judgment, safety constraints, regulatory compliance and complex datasets. Digital and AI solutions need to account for operational context, edge cases, and the human-in-the-loop processes that govern real outcomes.
-              </p>
-              
-              <p>
-                By treating digital and AI as integral components of interconnected operating systems – across upstream, midstream, distribution and retail – ScaleIQ helps organizations move beyond fragmented initiatives toward intelligent operations that are resilient, trusted and capable of delivering sustained value at scale.
-              </p>
-            </div>
-          </div>
-        </section>
+    {/* INTRO */}
+    <p className="text-lg text-gray-300 leading-relaxed max-w-4xl mb-20">
+      Oil and gas operations span a uniquely broad and interconnected landscape.
+      Each segment operates under distinct technical, operational, and regulatory
+      constraints, yet remains tightly coupled through shared assets, data flows,
+      and commercial dependencies. Digital and AI solutions must therefore
+      function across heterogeneous environments including field operations,
+      control systems, engineering workflows, enterprise platforms, and
+      customer-facing systems.
+    </p>
+
+    {/* ROW 1 */}
+    <div className="grid lg:grid-cols-2 gap-12 items-start mb-24">
+      <div>
+        <h3 className="text-2xl font-semibold text-scaleiq-gold mb-4">
+          Bridging fragmented tools, fragmented data and highly complex use cases
+        </h3>
+
+        <p className="text-gray-300 leading-relaxed mb-4">
+          Traditional IT service providers and product companies often fragment
+          responsibility across tools, vendors, and handoffs — leaving gaps
+          between domain intent, system behavior, and operational outcomes.
+        </p>
+
+        <p className="text-gray-300 leading-relaxed">
+          ScaleIQ addresses this gap through an end-to-end, consultative approach
+          grounded in deep oil and gas domain expertise — spanning problem
+          definition, digital architecture, AI workflow design, and system
+          integration.
+        </p>
+      </div>
+
+      <div className="rounded-xl overflow-hidden border-2 border-scaleiq-gold/30 shadow-xl">
+        <img
+          src="/image2.png"
+          alt="Fragmented Digital Systems"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    {/* ROW 2 */}
+    <div className="grid lg:grid-cols-2 gap-12 items-start mb-24">
+      <div className="order-2 lg:order-1 rounded-xl overflow-hidden border-2 border-scaleiq-gold/30 shadow-xl">
+        <img
+          src="/image3.png"
+          alt="AI as Operational System"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="order-1 lg:order-2">
+        <h3 className="text-2xl font-semibold text-scaleiq-gold mb-4">
+          Digital and AI as integral components of the operational ecosystem
+        </h3>
+
+        <p className="text-gray-300 leading-relaxed">
+          Our strength lies in treating digital and AI not as standalone
+          initiatives, but as integral components of the operational ecosystem
+          of oil and gas companies — embedded into real workflows, governed by
+          safety constraints, regulatory compliance, and human-in-the-loop
+          processes.
+        </p>
+      </div>
+    </div>
+
+    {/* ROW 3 */}
+    <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <h3 className="text-2xl font-semibold text-scaleiq-gold mb-4">
+          Data integration and platforms for fragmented oil and gas landscapes
+        </h3>
+
+        <p className="text-gray-300 leading-relaxed mb-4">
+          Despite years of digital investment, data integration remains largely
+          self-managed by operators — creating hidden complexity, operational
+          risk, and inconsistent data availability across the value chain.
+        </p>
+
+        <p className="text-gray-300 leading-relaxed">
+          Our data integration capabilities and platform offerings combine deep
+          domain understanding with system-level architecture, enabling scalable
+          integration, improved data quality, and governance aligned with
+          industry standards such as OSDU. The result is a trusted,
+          interoperable data environment that enables reliable decision-making.
+        </p>
+      </div>
+
+      <div className="rounded-xl overflow-hidden border-2 border-scaleiq-gold/30 shadow-xl">
+        <img
+          src="/image4.png"
+          alt="Oil and Gas Data Integration"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
         {/* Data Integration Section - BLACK Card */}
-        <section 
+        {/* <section 
           ref={(el) => (sectionsRef.current[5] = el)}
           className="section-animate max-w-6xl mx-auto px-6 lg:px-8 mb-20"
         >
@@ -265,7 +359,7 @@ export const AboutOverview = () => {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Testimonial Section - Premium BLACK */}
         <section 

@@ -384,17 +384,19 @@ export const GCCSolutions = () => {
               India GCC Solutions
               <span className="w-12 h-px bg-scaleiq-gold/50" />
             </motion.div>
+<motion.h1
+  {...fadeIn}
+  transition={{ delay: 0.1 }}
+  className="text-6xl lg:text-7xl font-bold mb-8 tracking-tight"
+>
+  Enabling Global{" "}
+  <span className="text-scaleiq-gold italic">
+    Energy Capability
+  </span>
+  <br />
+  Centers in India
+</motion.h1>
 
-            <motion.h1
-              {...fadeIn}
-              transition={{ delay: 0.1 }}
-              className="text-6xl lg:text-7xl font-bold mb-8 tracking-tight"
-            >
-              Transform Your{" "}
-              <span className="text-scaleiq-gold italic">
-                Global Operations
-              </span>
-            </motion.h1>
 
             <motion.p
               {...fadeIn}
@@ -623,77 +625,91 @@ export const GCCSolutions = () => {
         </section>
 
         {/* Engagement Models */}
-        <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
-          <div className="bg-white/5 border border-white/10 rounded-[40px] p-12 lg:p-20 relative overflow-hidden backdrop-blur-md">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-12 relative z-10">
-              <div className="lg:w-1/2 space-y-8">
-                <Badge className="bg-scaleiq-gold/10 text-scaleiq-gold border-scaleiq-gold/20 px-4 py-1.5 uppercase tracking-widest">
-                  Models
-                </Badge>
-                <h2 className="text-5xl font-bold leading-tight">
-                  Tailored{" "}
-                  <span className="text-scaleiq-gold">Operational</span>{" "}
-                  Partnerships
-                </h2>
+{/* Why Energy Companies Choose ScaleIQ */}
+<section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
+  <div className="bg-white/5 border border-white/10 rounded-[40px] p-12 lg:p-20 backdrop-blur-md relative overflow-hidden">
+    
+    {/* Gold Accent Line */}
+    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-scaleiq-gold to-transparent" />
 
-                <div className="flex gap-4">
-                  {Object.keys(transitionModels).map((m) => (
-                    <button
-                      key={m}
-                      onClick={() => setActiveModel(m)}
-                      className={`px-8 py-3 rounded-full font-bold transition-all ${
-                        activeModel === m
-                          ? "bg-scaleiq-gold text-black"
-                          : "border border-white/20 text-white hover:border-scaleiq-gold"
-                      }`}
-                    >
-                      {transitionModels[m].title}
-                    </button>
-                  ))}
-                </div>
-              </div>
+    <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      
+      {/* LEFT CONTENT */}
+      <div className="space-y-8">
+        <Badge className="bg-scaleiq-gold/10 text-scaleiq-gold border-scaleiq-gold/20 px-4 py-1.5 uppercase tracking-widest">
+          Why ScaleIQ
+        </Badge>
 
-              <div className="lg:w-1/2 w-full">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeModel}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    className="space-y-10"
-                  >
-                    <div>
-                      <h4 className="text-2xl font-bold mb-2">
-                        {transitionModels[activeModel].subtitle}
-                      </h4>
-                      <p className="text-gray-400 text-lg leading-relaxed">
-                        {transitionModels[activeModel].description}
-                      </p>
-                    </div>
+        <h2 className="text-5xl font-bold leading-tight">
+          Why Energy Companies{" "}
+          <span className="text-scaleiq-gold">Choose ScaleIQ</span>
+        </h2>
 
-                    <div className="space-y-4">
-                      {transitionModels[activeModel].phases.map((p, pi) => (
-                        <div key={pi} className="flex gap-6 items-start">
-                          <div className="text-scaleiq-gold font-bold text-sm pt-1 whitespace-nowrap">
-                            {p.period}
-                          </div>
-                          <div>
-                            <div className="font-bold text-white mb-1">
-                              {p.split} Split
-                            </div>
-                            <div className="text-gray-500 text-sm">
-                              {p.desc}
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </div>
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-bold text-white mb-2">
+              Trusted GCC Partnerships
+            </h4>
+            <p className="text-gray-400 leading-relaxed">
+              Working alongside leading GCC consultants and global delivery
+              partners to help energy companies establish and scale India GCCs
+              that are integrated, accountable, and aligned to global operating
+              models.
+            </p>
           </div>
-        </section>
+
+          <div>
+            <h4 className="font-bold text-white mb-2">
+              Deep Energy Domain Expertise
+            </h4>
+            <p className="text-gray-400 leading-relaxed">
+              Proven leadership experience across upstream, midstream, and
+              downstream operations — enabling faster decision-making and
+              operational relevance.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-white mb-2">
+              Strong Technology & Engineering Talent Pool
+            </h4>
+            <p className="text-gray-400 leading-relaxed">
+              Access to a diverse pool of technologists across data platforms,
+              analytics, AI/ML, and subsurface engineering — ready to scale with
+              your needs.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-white mb-2">
+              Focused Shift Augmentation
+            </h4>
+            <p className="text-gray-400 leading-relaxed">
+              Enable rapid team onboarding, operational continuity, and cost
+              efficiency without compromising quality, governance, or ownership.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT VISUAL */}
+      <div className="relative flex justify-center lg:justify-end">
+        <div className="w-full max-w-lg rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+          <img
+            src="public/image2.png"
+            alt="Why Energy Companies Choose ScaleIQ"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Subtle Glow */}
+        <div className="absolute inset-0 rounded-3xl bg-scaleiq-gold/10 blur-3xl opacity-20 -z-10" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         {/* CTA */}
         <section className="max-w-7xl mx-auto px-6 lg:px-8">
